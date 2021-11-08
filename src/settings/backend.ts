@@ -26,6 +26,15 @@ const pebblenetSettings: BackendSettings = {
   gasPrice: GasPrice.fromString("0.25upebble"),
 };
 
+
+const columbus5Settings: BackendSettings = {
+  nodeUrls: ["https://columbus-5--rpc--full.datahub.figment.io/apikey/110aabebcc2e83ec515eb54519f7d4f9"],
+  denominations: ["uluna", "uust"],
+  addressPrefix: "terra1",
+  gasPrice: GasPrice.fromString("0.25uust"),
+};
+
+
 // const oysternetSettings: BackendSettings = {
 //   nodeUrls: ["http://rpc.oysternet.cosmwasm.com"],
 //   denominations: ["usponge"],
@@ -73,6 +82,7 @@ const pebblenetSettings: BackendSettings = {
 const knownBackends: Partial<Record<string, BackendSettings>> = {
   devnet: devnetSettings,
   pebblenet: pebblenetSettings,
+  columbus5: coumbus5Settings
 };
 
 export function getCurrentBackend(): BackendSettings {
